@@ -13,3 +13,32 @@ $ docker build -t sqldef .
 ```
 $ docker build -t sqldef --build-arg VERSION=v0.x.y .
 ```
+
+## Using scripts in `bin/`
+
+### setenv.sh
+Modify `SQLDEF_VERSION` to point to the sqldef github tag you intend to build.  
+Modify `VERSION` to indicate container release.  
+
+### build.sh
+For local builds:
+```
+bin/build.sh 
+```
+
+For builds intended for dockerhub:
+```
+DOCKER_REPO=docker.io/username bin/build.sh 
+```
+
+### run.sh
+For local runs:
+```
+bin/run.sh
+```
+
+### push.sh
+To publish to duckerhub:
+```
+bin/push.sh username
+```
