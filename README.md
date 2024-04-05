@@ -14,6 +14,16 @@ $ docker build -t sqldef .
 $ docker build -t sqldef --build-arg VERSION=v0.x.y .
 ```
 
+## Run
+```
+docker run -it --rm sqldef 
+```
+
+## Run with args
+```
+docker run -it --rm sqldef mysqldef --help
+```
+
 ## Using scripts in `bin/`
 
 ### setenv.sh
