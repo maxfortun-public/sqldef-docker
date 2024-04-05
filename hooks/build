@@ -1,0 +1,5 @@
+#!/bin/bash -ex
+
+docker build --build-arg VERSION=$SQLDEF_VERSION -f $DOCKERFILE_PATH -t $IMAGE_NAME .
+
+
